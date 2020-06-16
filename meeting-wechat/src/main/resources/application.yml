@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    host: 112.126.67.31
+    port: 6379
+    lettuce:
+      pool:
+        max-idle: 10
+        min-idle: 2
+    password: chending
+#数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/wachat_meeting?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    password: chending
+    #指定使用的数据源为druid
+    type: com.alibaba.druid.pool.DruidDataSource
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: tech.chending.entity
